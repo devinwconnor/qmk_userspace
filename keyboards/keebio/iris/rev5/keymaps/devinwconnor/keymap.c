@@ -8,8 +8,6 @@ enum custom_layers {
   _GAMES,
   _MAPGAMES,
   _GW2,
-  _SE,
-  _DF,
   _NAV,
   _MEDIA,
   _NUM,
@@ -106,46 +104,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
-//   [_SE] = LAYOUT(
-//   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-//       KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,   KC_NO,
-//   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-//        KC_K,   KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,                               KC_T,   KC_INS, KC_HOME, KC_PGUP,   KC_P,   KC_NO,
-//   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-//        KC_I,  KC_LSFT,   KC_A,    KC_S,    KC_D,    KC_F,                               KC_N,   KC_DEL,  KC_END, KC_PGDN,  KC_NO,  TG(_SE),
-//   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-//        KC_G,  KC_LCTL,   KC_Z,    KC_C,    KC_V,    KC_B,  KC_LALT,            KC_P,    KC_M,   KC_B,   KC_COMM,  KC_DOT, KC_SLSH,  KC_NO,
-//   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-//                                     KC_SLSH, KC_SPC,  KC_X,                      KC_ENT, KC_BSPC,  KC_DEL
-//                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
-//   ),
-  [_SE] = LAYOUT(
-  //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-      KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_NO,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-      KC_M,    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,                               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_NO,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-      KC_UP,  KC_LSFT,  KC_A,    KC_S,    KC_D,    KC_F,                               KC_H,    KC_J,    KC_K,    KC_L,  KC_SCLN,  TG(_SE),
-  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_DOWN, KC_LCTL,  KC_X,    KC_C,    KC_V,    KC_B,   KC_T,             KC_LALT,  KC_N,    KC_M,  KC_COMM,  KC_DOT, KC_SLSH,  KC_NO,
-  //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_Z,   KC_SPC,   KC_G,                     KC_ENT,  KC_BSPC, KC_DEL
-                                // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
-  ),
-  
-  [_DF] = LAYOUT(
-  //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-      KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,   KC_NO,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_K,   KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,                               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_NO,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_I,  KC_LSFT,   KC_A,    KC_S,    KC_D,    KC_F,                               KC_H, MT(MOD_LSFT,KC_J), MT(MOD_LCTL,KC_K), MT(MOD_LALT,KC_L), MT(MOD_LGUI,KC_SCLN), KC_NO,
-  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       TG(_DF),KC_LCTL,  KC_Z,    KC_C,    KC_V,    KC_B,  KC_T,             KC_LALT,  KC_N,    KC_M,   KC_COMM,  KC_DOT, KC_SLSH,  KC_NO,
-  //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_ESC,  LS_SPC,  LS_TAB,                    LS_ENT, LS_BSPC,  LS_DEL
-                                // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
-  ),
   [_NAV] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                             KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
@@ -249,30 +207,12 @@ const rgblight_segment_t PROGMEM my_mapgames_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {6, 6, HSV_CYAN}
 );
 
-const rgblight_segment_t PROGMEM my_se_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 6, HSV_WHITE},     
-    {6, 6, HSV_WHITE}
-);
-
-const rgblight_segment_t PROGMEM my_df_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 6, HSV_ORANGE},     
-    {6, 6, HSV_ORANGE}
-);
-
-
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     my_default_layer,
     my_games_layer,
     my_mapgames_layer,
-    my_gw2_layer,
-    my_se_layer,
-    my_df_layer
-    // my_nav_layer,
-    // my_media_layer,        
-    // my_num_layer,    // Overrides other layers
-    // my_symbol_layer,     // Overrides other layers
-    // my_func_layer
+    my_gw2_layer
 );
 
 
@@ -290,8 +230,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(1, layer_state_cmp(state, _GAMES));
     rgblight_set_layer_state(2, layer_state_cmp(state, _MAPGAMES));
     rgblight_set_layer_state(3, layer_state_cmp(state, _GW2));
-    rgblight_set_layer_state(4, layer_state_cmp(state, _SE));
-    rgblight_set_layer_state(5, layer_state_cmp(state, _DF));
     return state;
 }
 
@@ -299,9 +237,3 @@ const uint16_t PROGMEM insert_combo[] = {KC_SLSH, KC_D, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(insert_combo, KC_PGDN)
 };
-
-// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-//   switch (keycode) {
-//   }
-//   return true;
-// }
